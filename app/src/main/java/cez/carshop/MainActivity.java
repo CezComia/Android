@@ -12,5 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnAdd = (Button)findViewById(R.id.btnAddCar);
+        Button btnView = (Button)findViewById(R.id.btnViewCarDetails);
+        Button btnSell = (Button)findViewById(R.id.btnSellCar);
     }
 }
