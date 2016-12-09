@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class AddCar extends AppCompatActivity {
+    private static int carID;
+    private String carName;
+    private String carModel;
+    private float carPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
