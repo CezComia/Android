@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Car Shop</string>
+    <string name="enterCarID">Please Enter Car ID</string>
 </resources>

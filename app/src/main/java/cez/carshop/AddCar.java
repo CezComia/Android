@@ -14,4 +14,5 @@ public class AddCar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_car);
     }
+
 }
