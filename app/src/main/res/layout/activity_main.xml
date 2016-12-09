@@ -37,5 +37,6 @@
         android:id="@+id/btnViewCarDetails"
         android:layout_marginBottom="25dp"
         android:layout_above="@+id/btnSellCar"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:onClick="viewCar" />
 </RelativeLayout>
