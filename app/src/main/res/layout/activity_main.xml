@@ -28,7 +28,8 @@
         android:id="@+id/btnSellCar"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/btnAddCar"
-        android:layout_alignStart="@+id/btnAddCar"/>
+        android:layout_alignStart="@+id/btnAddCar"
+        android:onClick="director" />
 
     <Button
         android:text="View Car Details"
@@ -38,5 +39,5 @@
         android:layout_marginBottom="25dp"
         android:layout_above="@+id/btnSellCar"
         android:layout_centerHorizontal="true"
-        android:onClick="viewCar" />
+        android:onClick="director" />
 </RelativeLayout>
