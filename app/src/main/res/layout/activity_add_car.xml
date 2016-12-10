@@ -11,4 +11,122 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cez.carshop.AddCar">
 
+    <TextView
+        android:text="Car Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:id="@+id/txtCarDetails"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editCarPrice"
+        android:layout_alignBaseline="@+id/txtCarPrice"
+        android:layout_alignBottom="@+id/txtCarPrice"
+        android:layout_alignLeft="@+id/editCarModel"
+        android:layout_alignStart="@+id/editCarModel"/>
+
+    <TextView
+        android:text="Price:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/txtCarPrice"
+        android:layout_below="@+id/editCarModel"
+        android:layout_alignLeft="@+id/txtCarModel"
+        android:layout_alignStart="@+id/txtCarModel"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/editCarID"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_alignBaseline="@+id/txtCarID"
+        android:layout_alignBottom="@+id/txtCarID"
+        android:layout_toRightOf="@+id/txtCarModel"
+        android:layout_toEndOf="@+id/txtCarModel"/>
+
+    <TextView
+        android:text="ID:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCarID"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_below="@+id/txtCarDetails"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp"/>
+
+    <TextView
+        android:text="Model:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCarModel"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/editCarName"
+        android:layout_alignRight="@+id/txtCarName"
+        android:layout_alignEnd="@+id/txtCarName"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editCarModel"
+        android:layout_alignBaseline="@+id/txtCarModel"
+        android:layout_alignBottom="@+id/txtCarModel"
+        android:layout_alignLeft="@+id/editCarName"
+        android:layout_alignStart="@+id/editCarName"/>
+
+    <TextView
+        android:text="Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCarName"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/editCarID"
+        android:layout_alignLeft="@+id/txtCarID"
+        android:layout_alignStart="@+id/txtCarID"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editCarName"
+        android:layout_alignBaseline="@+id/txtCarName"
+        android:layout_alignBottom="@+id/txtCarName"
+        android:layout_alignLeft="@+id/editCarID"
+        android:layout_alignStart="@+id/editCarID"/>
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:id="@+id/btnOK"
+        android:layout_below="@+id/editCarPrice"
+        android:layout_toLeftOf="@+id/txtCarDetails"
+        android:layout_toStartOf="@+id/txtCarDetails"/>
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnOK"
+        android:layout_alignRight="@+id/editCarPrice"
+        android:layout_alignEnd="@+id/editCarPrice"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
+        android:id="@+id/btnCancel"/>
+
 </RelativeLayout>
