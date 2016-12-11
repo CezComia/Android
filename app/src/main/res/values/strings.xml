@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Car Shop</string>
     <string name="enterCarID">Please Enter Car ID</string>
+    <string name="addCar">Add Car</string>
+    <string name="viewCar">View Car</string>
+    <string name="sellCar">Sell Car</string>
+    <string name="carID">Car ID</string>
+    <string name="carModel">Car Model</string>
+    <string name="carMake">Car Make</string>
+    <string name="carOwner">Car Owner</string>
+    <string name="carPrice">Car Price</string>
+    <string name="carYear">Car Year</string>
 </resources>
