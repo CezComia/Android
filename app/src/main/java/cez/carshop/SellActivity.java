@@ -1,13 +1,18 @@
 package cez.carshop;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SellActivity extends AppCompatActivity {
 
@@ -28,15 +33,52 @@ public class SellActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.valCarPrice)).setText("       " + cursor.getString(3));
     }
 
-    public void sell(View view)
+    public void sell(final View view)
     {
-        String query = String.format("UPDATE TABLE %s SET %s='%s' WHERE %s='%s'", Database.TABLE_NAME,Database.CURRENT_OWNER, "NEW USER" , Database.CARID, carid );
-        database.execute(query);
+
+        LayoutInflater li = LayoutInflater.from(this);
+        View promptsView = li.inflate(R.layout.prompt, null);
+
+        final EditText input = (EditText) promptsView
+                .findViewById(R.id.txtEnterCarID);
+        ((EditText) promptsView
+                .findViewById(R.id.txtEnterCarID)).setHint("Please Enter new Owner name");
+        ((EditText) promptsView.findViewById(R.id.txtEnterCarID)).setInputType(InputType.TYPE_CLASS_TEXT);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setCancelable(false)
-                .setTitle("Ownership changed!")
-                .setMessage("The car's new owner is " + "NEW USER")
-                .setPositiveButton("OK", null).create();
+                .setView(promptsView)
+                .setTitle("Please Enter the Information")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(input.getText().toString().isEmpty())
+                        {
+                            AlertDialog confirm = new AlertDialog.Builder(SellActivity.this)
+                                    .setCancelable(false)
+                                    .setTitle("Please Enter the Information")
+                                    .setMessage("New owner information is required!\n\nWould you like to enter it?")
+                                    .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            sell(view);
+                                        }
+                                    })
+                                    .setNegativeButton("NO",null).create();
+                            confirm.show();
+                        }
+                        else
+                        {
+                            database.updateOwner(carid,input.getText().toString());
+                            Toast.makeText(SellActivity.this, "Modified Owner", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).create();
         dialog.show();
     }
 

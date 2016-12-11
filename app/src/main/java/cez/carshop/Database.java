@@ -1,5 +1,6 @@
 package cez.carshop;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -33,6 +34,13 @@ public class Database {
     public void execute(String query)
     {
         database.execSQL(query);
+    }
+
+    public void updateOwner(String id, String newOwner)
+    {
+        ContentValues values = new ContentValues();
+        values.put(CURRENT_OWNER,newOwner);
+        database.update(TABLE_NAME,values,CARID+"="+id,null);
     }
 
 
