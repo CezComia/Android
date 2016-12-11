@@ -18,7 +18,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:id="@+id/txtCarDetails"/>
+        android:id="@+id/txtCarDetails">
+    </TextView>
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -44,7 +46,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
         android:ems="10"
         android:id="@+id/editCarID"
         android:layout_marginLeft="25dp"
@@ -52,7 +53,10 @@
         android:layout_alignBaseline="@+id/txtCarID"
         android:layout_alignBottom="@+id/txtCarID"
         android:layout_toRightOf="@+id/txtCarModel"
-        android:layout_toEndOf="@+id/txtCarModel"/>
+        android:layout_toEndOf="@+id/txtCarModel"
+        android:inputType="number">
+        <requestFocus/>
+    </EditText>
 
     <TextView
         android:text="ID:"
@@ -116,7 +120,8 @@
         android:id="@+id/btnOK"
         android:layout_below="@+id/editCarPrice"
         android:layout_toLeftOf="@+id/txtCarDetails"
-        android:layout_toStartOf="@+id/txtCarDetails"/>
+        android:layout_toStartOf="@+id/txtCarDetails"
+        android:onClick="addCar" />
 
     <Button
         android:text="Cancel"
@@ -127,6 +132,7 @@
         android:layout_alignEnd="@+id/editCarPrice"
         android:layout_marginRight="22dp"
         android:layout_marginEnd="22dp"
-        android:id="@+id/btnCancel"/>
+        android:id="@+id/btnCancel"
+        android:onClick="cancel" />
 
 </RelativeLayout>
