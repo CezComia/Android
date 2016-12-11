@@ -12,7 +12,7 @@
     tools:context="cez.carshop.MainActivity">
 
     <Button
-        android:text="@string/addCar"
+        android:text="Add Car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
         android:onClick="addCar" />
 
     <Button
-        android:text="@string/sellCar"
+        android:text="Sell Car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnSellCar"
@@ -32,7 +32,7 @@
         android:onClick="director" />
 
     <Button
-        android:text="@string/viewCar"
+        android:text="View Car Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnViewCarDetails"
