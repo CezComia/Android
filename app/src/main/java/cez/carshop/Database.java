@@ -43,5 +43,4 @@ public class Database {
         database.update(TABLE_NAME,values,CARID+"="+id,null);
     }
 
-
 }
