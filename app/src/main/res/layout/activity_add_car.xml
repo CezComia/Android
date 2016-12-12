@@ -9,16 +9,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cez.carshop.AddCar">
+    tools:context="cez.carshop.AddCar"
+    android:background="#FA5858">
 
     <TextView
-        android:text="Car Details"
+        android:text="CAR DETAILS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:id="@+id/txtCarDetails">
+        android:id="@+id/txtCarDetails"
+        android:textColor="#000000">
     </TextView>
 
 
@@ -31,7 +33,8 @@
         android:layout_alignBaseline="@+id/txtCarPrice"
         android:layout_alignBottom="@+id/txtCarPrice"
         android:layout_alignLeft="@+id/editCarModel"
-        android:layout_alignStart="@+id/editCarModel"/>
+        android:layout_alignStart="@+id/editCarModel"
+        android:textColor="#000000"/>
 
     <TextView
         android:text="Price:"
@@ -41,7 +44,8 @@
         android:id="@+id/txtCarPrice"
         android:layout_below="@+id/editCarModel"
         android:layout_alignLeft="@+id/txtCarModel"
-        android:layout_alignStart="@+id/txtCarModel"/>
+        android:layout_alignStart="@+id/txtCarModel"
+        android:textColor="#000000"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -68,7 +72,8 @@
         android:layout_below="@+id/txtCarDetails"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="44dp"/>
+        android:layout_marginTop="44dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:text="Model:"
@@ -78,7 +83,8 @@
         android:layout_marginTop="26dp"
         android:layout_below="@+id/editCarName"
         android:layout_alignRight="@+id/txtCarName"
-        android:layout_alignEnd="@+id/txtCarName"/>
+        android:layout_alignEnd="@+id/txtCarName"
+        android:textColor="#000000"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -99,7 +105,8 @@
         android:layout_marginTop="34dp"
         android:layout_below="@+id/editCarID"
         android:layout_alignLeft="@+id/txtCarID"
-        android:layout_alignStart="@+id/txtCarID"/>
+        android:layout_alignStart="@+id/txtCarID"
+        android:textColor="#000000"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -121,7 +128,8 @@
         android:layout_below="@+id/editCarPrice"
         android:layout_toLeftOf="@+id/txtCarDetails"
         android:layout_toStartOf="@+id/txtCarDetails"
-        android:onClick="addCar" />
+        android:onClick="addCar"
+        />
 
     <Button
         android:text="Cancel"
@@ -133,6 +141,7 @@
         android:layout_marginRight="22dp"
         android:layout_marginEnd="22dp"
         android:id="@+id/btnCancel"
-        android:onClick="cancel" />
+        android:onClick="cancel"
+        />
 
 </RelativeLayout>

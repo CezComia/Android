@@ -9,35 +9,40 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cez.carshop.MainActivity">
+    tools:context="cez.carshop.MainActivity"
+    android:background="#58FAAC">
 
     <Button
         android:text="Add Car"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:id="@+id/btnAddCar"
-        android:onClick="addCar" />
-
-    <Button
-        android:text="Sell Car"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSellCar"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/btnAddCar"
-        android:layout_alignStart="@+id/btnAddCar"
-        android:onClick="director" />
+        android:onClick="addCar"
+        android:textColor="#FF0000"/>
 
     <Button
         android:text="View Car Details"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnViewCarDetails"
-        android:layout_marginBottom="25dp"
-        android:layout_above="@+id/btnSellCar"
-        android:layout_centerHorizontal="true"
-        android:onClick="director" />
+        android:onClick="director"
+        android:layout_marginTop="40dp"
+        android:textColor="#FF4000"
+        android:layout_below="@+id/btnAddCar"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:text="Sell Car"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSellCar"
+        android:onClick="director"
+        android:textColor="#0B610B"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/btnViewCarDetails"
+        android:layout_alignLeft="@+id/btnAddCar"
+        android:layout_alignStart="@+id/btnAddCar"/>
 </RelativeLayout>
